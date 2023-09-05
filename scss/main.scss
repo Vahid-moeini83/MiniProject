@@ -9,4 +9,185 @@
     align-items: $ai;
 }
 
+//mixin for width & height
+@mixin widthHeight($width , $height) {
+    width: $width;
+    height: $height;
+}
+
 //body styles
+//header
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+    border-bottom: 3px solid #ef4056;
+}
+
+.header-top {
+    @include flex(row , space-between , center);
+}
+
+.header-top-right , .header-top-left {
+    @include flex();
+}
+
+.header-top-right {
+    gap: 20px;
+}
+
+.header-top-left {
+    gap: 30px;
+}
+
+.market-icon {
+    @include widthHeight(115px , 30px);
+
+    a {
+        img {
+            @include widthHeight(100% , 100%);
+        }
+    }
+}
+
+.search-box {
+    width: 500px;
+
+    input {
+        background-color: #e1e1e1;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: none;
+        width: 100%;
+    }
+
+    input:focus {
+        outline: none;
+    }
+}
+
+.login-btn {
+    button {
+        @include flex();
+        transition: all 0.6s;
+        background-color: unset;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 10px;
+        gap: 10px;
+        font-weight: bold;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    button:hover {
+        background-color: #e1e1e1;
+        border: 1px solid black;
+        transition: all 0.6s;
+    }
+}
+
+.shop-cart-icon {
+    i {
+        font-size: 30px;
+        @include flex();
+        transition: all 0.6s;
+    }
+
+    i:hover {
+        color: #ef4056;
+        transition: all 0.6s;
+    }
+}
+//end of header
+
+// top-navbar
+.top-navbar {
+    @include flex(row , space-between , center);
+}
+
+.top-navbar-right , .menu-box , .nav-box , .support-box {
+    @include flex();
+}
+
+.top-navbar-right {
+    gap: 20px;
+}
+
+.menu-box {
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-box {
+    gap: 20px;
+    padding: 0 15px;
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+}
+
+.nav-box-inner {
+    a {
+        @include flex();
+        gap: 5px;
+        color: #616060;
+        font-size: 15px;
+        transition: all 0.6s;
+    }
+
+    a:hover {
+        color: black;
+        transition: all 0.6s;
+    }
+
+    a:hover .nav-icons i {
+        transition: all 0.6s;
+        color: #ef4056;
+    }
+}
+
+.nav-icons {
+    i {
+        color: #9f9f9f;
+    }
+}
+
+.support-box {
+    gap: 20px;
+}
+
+.support-box-inner {
+    span {
+        transition: all 0.6s;
+        font-size: 15px;
+        color: #616060;
+        cursor: pointer;
+    }
+
+    span:hover {
+        transition: all 0.6s;
+        color: black;
+    }
+}
+
+.top-navbar-left {
+    @include flex();
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+
+.top-navbar-left:hover .city-icon i{
+    color: #ef4056;
+    transition: all 0.6s;
+}
+
+.choose-city {
+    span {
+        font-size: 15px;
+        color: black;
+    }
+}
