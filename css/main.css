@@ -50,7 +50,8 @@ ul li {
   list-style-type: none; }
 
 .header {
-  padding: 15px; }
+  padding: 15px;
+  border-bottom: 3px solid #ef4056; }
 
 .header-top {
   display: flex;
