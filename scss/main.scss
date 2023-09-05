@@ -9,4 +9,81 @@
     align-items: $ai;
 }
 
+//mixin for width & height
+@mixin widthHeight($width , $height) {
+    width: $width;
+    height: $height;
+}
+
 //body styles
+.header {
+    padding: 15px;
+}
+
+.header-top {
+    @include flex(row , space-between , center);
+}
+
+.header-top-right , .header-top-left {
+    @include flex();
+}
+
+.header-top-right {
+    gap: 20px;
+}
+
+.header-top-left {
+    gap: 30px;
+}
+
+.market-icon {
+    @include widthHeight(115px , 30px);
+
+    a {
+        img {
+            @include widthHeight(100% , 100%);
+        }
+    }
+}
+
+.search-box {
+    input {
+        background-color: #e1e1e1;
+        border-radius: 5px;
+        padding: 10px 20px;
+        border: none;
+    }
+
+    input:focus {
+        outline: none;
+    }
+}
+
+.login-btn {
+    button {
+        @include flex();
+        transition: all 0.6s;
+        background-color: unset;
+        border: 1px solid #e1e1e1;
+        border-radius: 5px;
+        padding: 10px;
+        gap: 10px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    button:hover {
+        background-color: #e1e1e1;
+        border: 1px solid black;
+        transition: all 0.6s;
+    }
+}
+
+.shop-cart-icon {
+    i {
+        font-size: 20px;
+        @include flex();
+    }
+}

@@ -48,3 +48,66 @@ a {
 
 ul li {
   list-style-type: none; }
+
+.header {
+  padding: 15px; }
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.header-top-right, .header-top-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.header-top-right {
+  gap: 20px; }
+
+.header-top-left {
+  gap: 30px; }
+
+.market-icon {
+  width: 115px;
+  height: 30px; }
+  .market-icon a img {
+    width: 100%;
+    height: 100%; }
+
+.search-box input {
+  background-color: #e1e1e1;
+  border-radius: 5px;
+  padding: 10px 20px;
+  border: none; }
+
+.search-box input:focus {
+  outline: none; }
+
+.login-btn button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.6s;
+  background-color: unset;
+  border: 1px solid #e1e1e1;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px; }
+  .login-btn button i {
+    font-size: 20px; }
+
+.login-btn button:hover {
+  background-color: #e1e1e1;
+  border: 1px solid black;
+  transition: all 0.6s; }
+
+.shop-cart-icon i {
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
