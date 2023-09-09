@@ -1,7 +1,7 @@
 //import fonts and same style codes
 @import "sameCode";
 
-//mixin for flex style
+//mixins and class defines
 @mixin flex($dir:row , $jc:center , $ai:center) {
     display: flex;
     flex-direction: $dir;
@@ -9,10 +9,13 @@
     align-items: $ai;
 }
 
-//mixin for width & height
 @mixin widthHeight($width , $height) {
     width: $width;
     height: $height;
+}
+
+.small-boxes-padding {
+    padding: 20px 200px;
 }
 
 //body styles
@@ -194,13 +197,8 @@
 //end of top navbar
 
 //trends
-.template-trends-box {
-    padding: 20px 0;
-}
-
 .template-trends-inner {
-    @include flex();
-    gap: 60px;
+    @include flex(row , space-between , center);
 }
 
 .trends {
@@ -214,6 +212,7 @@
     overflow: hidden;
     padding: 10px;
     cursor: pointer;
+    transition: all 0.6s;
 
     img {
         @include widthHeight(100% , 100%);
@@ -221,9 +220,54 @@
     }
 }
 
+.trends-image-box:hover {
+    transition: all 0.6s;
+    border: 3px solid #ef4056;
+}
+
 .trends-topic {
     span {
         font-size: 14px;
         font-weight: 600;
+    }
+}
+//end of trends
+
+//top informations
+.useful-info-inner {
+    @include flex(row , space-between , center);
+}
+
+.useful-info {
+    @include flex(column);
+}
+
+.useful-info:hover {
+    cursor: pointer;
+}
+
+.info-icon-box {
+    @include flex();
+    @include widthHeight(50px , 50px);
+
+    img {
+        @include widthHeight(100% , 100%);
+        object-fit: contain;
+    }
+
+    #more-icon {
+        font-size: 20px;
+    }
+}
+//end of useful info
+
+//suggestion img box
+.suggestion-image-box {
+    @include widthHeight(315px , 230px);
+
+    img {
+        @include widthHeight(100% , 100%);
+        border-radius: 16px;
+        object-fit: cover;
     }
 }
