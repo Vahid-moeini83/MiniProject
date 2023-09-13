@@ -247,7 +247,8 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  gap: 5px; }
 
 .useful-info:hover {
   cursor: pointer; }
@@ -266,11 +267,108 @@ ul li {
   .info-icon-box #more-icon {
     font-size: 20px; }
 
-.suggestion-image-box {
-  width: 315px;
-  height: 230px; }
-  .suggestion-image-box img {
+.info-text-box {
+  font-size: 13px; }
+
+.info-more-icon {
+  background-color: #e1e1e1;
+  border-radius: 50%; }
+
+.suggestion-image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  object-fit: cover; }
+
+.suprising-box-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: url(https://www.digikala.com/statics/img/svg/typography/freshPattern.svg) left center no-repeat;
+  background-color: #e1e1e1;
+  border-radius: 15px;
+  padding: 25px; }
+
+.suprise-banner-right, .suprise-banner-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; }
+
+.suprise-banner-discount {
+  background: #00c700;
+  padding: 5px;
+  border-radius: 16px; }
+  .suprise-banner-discount span {
+    color: white; }
+
+.suprising-products-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; }
+
+.suprising-products {
+  width: 60px;
+  height: 60px;
+  position: relative; }
+  .suprising-products img {
     width: 100%;
     height: 100%;
-    border-radius: 16px;
-    object-fit: cover; }
+    object-fit: cover;
+    border-radius: 50%; }
+  .suprising-products span {
+    background-color: #ef4056;
+    border-radius: 5px;
+    padding: 2px 5px;
+    position: absolute;
+    right: -10px;
+    bottom: -5px;
+    font-size: 13px;
+    color: white;
+    font-weight: bold; }
+
+.all-products-link {
+  transition: all 0.6s;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: white; }
+  .all-products-link a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #00c700;
+    gap: 10px; }
+
+.all-products-link:hover a {
+  color: #00c700; }
+
+.digi-plus-box {
+  background-color: #930493;
+  border-radius: 16px; }
+
+.digi-plus-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 10px; }
+  .digi-plus-description span {
+    color: white;
+    font-size: 15px;
+    font-weight: 600; }
+  .digi-plus-description button {
+    border: 1px solid white;
+    background: transparent;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 5px;
+    gap: 10px; }
