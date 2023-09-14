@@ -233,6 +233,19 @@
 }
 //end of trends
 
+//top slider
+
+.banner-slider {
+    @include widthHeight(100% , 400px);
+
+    img {
+        @include widthHeight(100% , 100%);
+        object-fit: cover;
+    }
+}
+
+//end of top slider
+
 //top informations
 .useful-info-inner {
     @include flex(row , space-between , center);
