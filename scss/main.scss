@@ -21,11 +21,15 @@
 //body styles
 //header
 .header {
+    border-bottom: 3px solid #ef4056;
+    background-color: white;
+    position: sticky;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     padding: 15px;
-    border-bottom: 3px solid #ef4056;
+    z-index: 999;
+    gap: 20px;
+    top: 0;
 }
 
 .header-top {
@@ -236,11 +240,31 @@
 //top slider
 
 .banner-slider {
-    @include widthHeight(100% , 400px);
+    height: 400px !important;
+    position: relative;
 
     img {
         @include widthHeight(100% , 100%);
         object-fit: cover;
+    }
+}
+
+.banner-slider:hover .arrow-slider {
+    @include flex();
+    gap: 10px;
+}
+
+.arrow-slider {
+    display: none;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+
+    span {
+        @include widthHeight(35px , 35px);
+        @include flex();
+        background-color: white;
+        border-radius: 50%;
     }
 }
 
